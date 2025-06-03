@@ -13,11 +13,10 @@ const Login = () => {
     const onFinish=async(values)=>{
          try{
             dispatch(showloading());
-        const response=await axios.post('/api/user/login',values);
+        const response=await axios.post('https://appointment-app-2.onrender.com/api/user/login',values);
         dispatch(hideloading());
         if(response.data.success){
         toast.success(response.data.message);
-        console.log("🏷️  Received token:", response.data.data);
         localStorage.setItem("token",response.data.data);
         navigate("/");
         }else{
