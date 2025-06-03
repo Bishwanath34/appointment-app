@@ -27,7 +27,7 @@ const navigate=useNavigate();
       : [];
 
     const response = await axios.post(
-      "https://appointment-app-2.onrender.com/api/user/apply-doctor-account",
+      "https://appointment-app-ser.onrender.com/api/user/apply-doctor-account",
       {
         ...values,
         userId: user._id,
