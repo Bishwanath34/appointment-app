@@ -64,7 +64,7 @@ function Profile() {
     try {
       dispatch(showloading());
       const response = await axios.post(
-        '/api/doctor/get-doctor-info-by-user-id',
+        'https://appointment-app-ser.onrender.com/api/doctor/get-doctor-info-by-user-id',
         { userId: params.userId },
         {
           headers: {
