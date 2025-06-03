@@ -12,7 +12,7 @@ const Register = () => {
     const onFinish=async(values)=>{
        try{
         dispatch(showloading);
-const response=await axios.post('/api/user/register',values);
+const response=await axios.post('https://appointment-app-2.onrender.com/api/user/register',values);
 dispatch(hideloading);
 if(response.data.success){
 toast.success(response.data.message);
