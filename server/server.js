@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://appointment-app-ser.onrender.com' 
+  'https://appointment-booking-518f.onrender.com' 
 ];
 
 app.use(cors({
