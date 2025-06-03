@@ -11,7 +11,6 @@ function UsersList() {
     const getUsersData=async()=>{
 try{
 dispatch(showloading());
-console.log('Token:', localStorage.getItem('token'));
 
 const response = await axios.get('https://appointment-app-2.onrender.com/api/admin/get-all-users', {
   headers: {
