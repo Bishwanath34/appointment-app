@@ -14,7 +14,7 @@ function DoctorsList() {
       const getDoctorsData=async()=>{
   try{
   dispatch(showloading());  
-  const response = await axios.get('https://appointment-app-2.onrender.com/api/admin/get-all-doctors', {
+  const response = await axios.get('https://appointment-app-ser.onrender.com/api/admin/get-all-doctors', {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
@@ -31,7 +31,7 @@ function DoctorsList() {
  const changeDoctorStatus=async(record,status)=>{
   try{
   dispatch(showloading());  
-  const response = await axios.post('https://appointment-app-2.onrender.com/api/admin/change-doctor-account-status',{doctorId:record._id,userId:record.userId,status:status}, {
+  const response = await axios.post('https://appointment-app-ser.onrender.com/api/admin/change-doctor-account-status',{doctorId:record._id,userId:record.userId,status:status}, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
