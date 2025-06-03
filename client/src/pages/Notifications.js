@@ -14,7 +14,7 @@ function Notifications() {
     const markAllAsSeen=async ()=>{
 try{
         dispatch(showloading);
-const response=await axios.post('https://appointment-app-2.onrender.com/api/user/mark-all-notifications-as-seen',{userId:user._id},{
+const response=await axios.post('https://appointment-app-ser.onrender.com/api/user/mark-all-notifications-as-seen',{userId:user._id},{
     headers:{
         Authorization:`Bearer ${localStorage.getItem("token")}`
     }
@@ -35,7 +35,7 @@ toast.error("something went wrong");
     const DeleteAll=async ()=>{
 try{
         dispatch(showloading);
-const response=await axios.post('https://appointment-app-2.onrender.com/api/user/delete-all-notifications',{userId:user._id},{
+const response=await axios.post('https://appointment-app-ser.onrender.com/api/user/delete-all-notifications',{userId:user._id},{
     headers:{
         Authorization:`Bearer ${localStorage.getItem("token")}`
     }
