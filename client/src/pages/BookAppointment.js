@@ -24,7 +24,7 @@ function BookAppointment() {
       dispatch(showloading());
 
       const response = await axios.post(
-        "/api/doctor/get-doctor-info-by-id",
+        "https://appointment-app-2.onrender.com/api/doctor/get-doctor-info-by-id",
         { doctorId: params.doctorId },
         {
           headers: {
@@ -69,7 +69,7 @@ function BookAppointment() {
       dispatch(showloading());
 
       const response = await axios.post(
-        "/api/user/check-booking-availability",
+        "https://appointment-app-2.onrender.com/api/user/check-booking-availability",
         {
           doctorId: params.doctorId,
           date, // sending "DD-MM-YYYY" string directly
@@ -112,7 +112,7 @@ function BookAppointment() {
       dispatch(showloading());
 
       const response = await axios.post(
-        "/api/user/book-appointment",
+        "https://appointment-app-2.onrender.com/api/user/book-appointment",
         {
           doctorId: params.doctorId,
           userId: user._id,
