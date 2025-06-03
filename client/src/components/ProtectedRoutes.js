@@ -11,7 +11,7 @@ const ProtectedRoutes = (props) => {
     const getUser=async()=>{
 try{
     dispatch(showloading());
-const response=await axios.post('/api/user/get-user-info-by-id',{token:localStorage.getItem('token')},{
+const response=await axios.post('https://appointment-app-2.onrender.com/api/user/get-user-info-by-id',{token:localStorage.getItem('token')},{
     headers:{
         Authorization:`Bearer ${localStorage.getItem("token")}`,
     }
